@@ -1,0 +1,25 @@
+.Cameras {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.Cameras .one-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.Cameras .signal-video{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-items: flex-start;
+}
+
+.signal-input {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    width: 100%;
+}

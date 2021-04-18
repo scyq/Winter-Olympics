@@ -1,10 +1,16 @@
 import React from "react";
-import ReactPlayer from 'react-player'
+import './Player.css';
+import mp4 from "../../assets/example.mp4"
 
 
 class Player extends React.Component {
     render() {
-        return <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />
+        return (
+            <video className="Player" controls height="300">
+                <source src={mp4}
+                    type="video/mp4"></source>
+            </video>
+        );
     }
 }
 

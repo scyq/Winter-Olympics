@@ -1,7 +1,6 @@
 .Cameras {
     display: flex;
     flex-direction: column;
-    width: 100%;
 }
 
 .Cameras .one-row {
@@ -22,4 +21,13 @@
     flex-direction: row;
     padding: 30px;
     width: 100%;
+}
+
+.signal-input .title{
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.signal-input .path{
+    margin-right: 20px;
 }

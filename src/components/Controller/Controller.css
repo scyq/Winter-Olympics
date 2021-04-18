@@ -1,0 +1,22 @@
+.Controller {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.Controller Button{
+    width: 200px;
+    height: 100px;
+    font-size: 24px;
+    margin: 20px;
+    border-style: unset;
+    border-radius: 30px;
+}
+
+#startBtn {
+    background: linear-gradient(-90deg, #29bdd9 0%, #276ace 100%);
+}
+
+#vrBtn {
+    background: linear-gradient(to right, #ff9569 0%, #e92758 100%)
+}

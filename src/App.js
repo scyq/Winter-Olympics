@@ -3,6 +3,7 @@ import React from 'react';
 import Cameras from './components/Cameras/Cameras';
 import { inject, observer, Provider } from 'mobx-react';
 import Controller from './components/Controller/Controller';
+import Header from './components/Header/Header';
 
 @inject("store")
 @observer
@@ -15,13 +16,14 @@ class App extends React.Component {
     return (
       <Provider {...this.props}>
         <div className="App">
-          <div className="Controller">
+          <Header></Header>
+          <div className="row-panel">
             <Controller></Controller>
+            <Cameras></Cameras>
           </div>
           <div className="playground">
-            <img src={store.playground} alt="playground" style={{ height: "1200px" }}></img>
+            <img src={store.playground} alt="playground" style={{ width: "80%" }}></img>
           </div>
-          <Cameras></Cameras>
         </div>
       </Provider>
     );

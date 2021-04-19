@@ -1,9 +1,25 @@
 .App {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App .row-panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.App .playground {
+  margin: 30px;
+  display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.App .playground {
-  margin: 0 30px 30px 30px;
+.site-page-header {
+  border: 1px solid rgb(235, 237, 240);
+  width: 100%;
+  height: 20%;
 }

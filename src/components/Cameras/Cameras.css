@@ -15,19 +15,3 @@
     padding: 30px;
     align-items: flex-start;
 }
-
-.signal-input {
-    display: flex;
-    flex-direction: row;
-    padding: 30px;
-    width: 100%;
-}
-
-.signal-input .title{
-    font-weight: bold;
-    margin-right: 20px;
-}
-
-.signal-input .path{
-    margin-right: 20px;
-}

@@ -13,6 +13,10 @@
     border-radius: 30px;
 }
 
+#loadSignal {
+    background: linear-gradient(to right, #f6d365 0%, #fda085 100%)
+}
+
 #startBtn {
     background: linear-gradient(-90deg, #29bdd9 0%, #276ace 100%);
 }

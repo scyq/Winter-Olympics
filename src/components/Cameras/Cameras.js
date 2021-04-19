@@ -44,44 +44,6 @@ class Cameras extends React.Component {
                         <Player path={store.signalPath[3]}></Player>
                     </div>
                 </div>
-
-                <div className="one-row">
-                    <div className="signal-input">
-                        <div className="title">信号源1</div>
-                        <div className="path">{store.signalPath[0] ? store.signalPath[0] : "请正确选择信号源"}</div>
-                        <input type="file" accept="video/*" onChange={e => {
-                            this.videoSelection(e, 1, store);
-                        }}></input>
-                    </div>
-
-                    <div className="signal-input">
-                        <div className="title">信号源2</div>
-                        <div className="path">{store.signalPath[0] ? store.signalPath[1] : "请正确选择信号源"}</div>
-                        <input type="file" accept="video/*" onChange={e => {
-                            this.videoSelection(e, 2, store);
-                        }}></input>
-                    </div>
-                </div>
-
-
-                <div className="one-row">
-                    <div className="signal-input">
-                        <div className="title">信号源3</div>
-                        <div className="path">{store.signalPath[0] ? store.signalPath[2] : "请正确选择信号源"}</div>
-                        <input type="file" accept="video/*" onChange={e => {
-                            this.videoSelection(e, 3, store);
-                        }}></input>
-                    </div>
-
-                    <div className="signal-input">
-                        <div className="title">信号源4</div>
-                        <div className="path">{store.signalPath[0] ? store.signalPath[3] : "请正确选择信号源"}</div>
-                        <input type="file" accept="video/*" onChange={e => {
-                            this.videoSelection(e, 4, store);
-                        }}></input>
-                    </div>
-                </div>
-
             </div>
         );
     }

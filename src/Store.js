@@ -1,4 +1,5 @@
 import { action, makeObservable, observable } from "mobx";
+const host = "http://127.0.0.1:8000";
 
 class Store {
 
@@ -7,6 +8,7 @@ class Store {
     }
 
     @observable signalPath = [undefined, undefined, undefined, undefined];
+    @observable playground = require("./assets/playground.jpg").default;
 
     /**
      * 
@@ -16,6 +18,26 @@ class Store {
     @action
     changeSignalPath(signalIndex, path) {
         this.signalPath[signalIndex - 1] = path;
+    }
+
+    start() {
+        fetch(host + "/start")
+            .then(res => res.json())
+            .then(data => {
+                if (data) {
+                    this.analysisDone();
+                }
+            });
+    }
+
+    @action
+    analysisDone() {
+        console.log(1)
+        try {
+            this.playground = require("./assets/frame.jpg").default;
+        } finally {
+
+        }
     }
 }
 

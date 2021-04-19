@@ -26,8 +26,11 @@ def draw():
             xmid = (xmin + xmax) / 2
             ymid = (ymin + ymax) / 2
             cv2.circle(frame_img, (int(xmid), int(ymid)), 10, (0, 0, 255), -1)
-    cv2.imwrite("./algorithm/output/frame.jpg", frame_img)
+    cv2.imwrite("./src/assets/frame.jpg", frame_img)
 
+
+if __name__ == "__main__":
+    draw()
 
 # for i in range(0,len(mutilcurling)):
 #   frame_img = cv2.imread('C:\\Users\\pc\\Desktop\\cut3\\%04d.jpeg'%(i+1),1);

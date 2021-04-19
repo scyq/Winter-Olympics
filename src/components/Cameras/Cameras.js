@@ -45,19 +45,43 @@ class Cameras extends React.Component {
                     </div>
                 </div>
 
-                <div className="config">
-                    {store.signalPath.map((ele, i) => {
-                        return (
-                            <div className="signal-input" key={i}>
-                                <div className="title">信号源{i + 1}</div>
-                                <div className="path">{ele ? ele : "请正确选择信号源"}</div>
-                                <input type="file" accept="video/*" onChange={e => {
-                                    this.videoSelection(e, i + 1, store);
-                                }}></input>
-                            </div>
-                        )
-                    })};
+                <div className="one-row">
+                    <div className="signal-input">
+                        <div className="title">信号源1</div>
+                        <div className="path">{store.signalPath[0] ? store.signalPath[0] : "请正确选择信号源"}</div>
+                        <input type="file" accept="video/*" onChange={e => {
+                            this.videoSelection(e, 1, store);
+                        }}></input>
+                    </div>
+
+                    <div className="signal-input">
+                        <div className="title">信号源2</div>
+                        <div className="path">{store.signalPath[0] ? store.signalPath[1] : "请正确选择信号源"}</div>
+                        <input type="file" accept="video/*" onChange={e => {
+                            this.videoSelection(e, 2, store);
+                        }}></input>
+                    </div>
                 </div>
+
+
+                <div className="one-row">
+                    <div className="signal-input">
+                        <div className="title">信号源3</div>
+                        <div className="path">{store.signalPath[0] ? store.signalPath[2] : "请正确选择信号源"}</div>
+                        <input type="file" accept="video/*" onChange={e => {
+                            this.videoSelection(e, 3, store);
+                        }}></input>
+                    </div>
+
+                    <div className="signal-input">
+                        <div className="title">信号源4</div>
+                        <div className="path">{store.signalPath[0] ? store.signalPath[3] : "请正确选择信号源"}</div>
+                        <input type="file" accept="video/*" onChange={e => {
+                            this.videoSelection(e, 4, store);
+                        }}></input>
+                    </div>
+                </div>
+
             </div>
         );
     }

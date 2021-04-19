@@ -4,10 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import store from "./Store";
+import network from "./Network";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App store={store} />
+    <App store={store} network={network} />
   </React.StrictMode>,
   document.getElementById('root')
 );

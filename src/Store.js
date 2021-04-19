@@ -1,4 +1,4 @@
-import { makeObservable, observable } from "mobx";
+import { action, makeObservable, observable } from "mobx";
 
 class Store {
 
@@ -6,11 +6,17 @@ class Store {
         makeObservable(this);
     }
 
-    @observable signalPath1 = undefined;
-    @observable signalPath2 = undefined;
-    @observable signalPath3 = undefined;
-    @observable signalPath4 = undefined;
+    @observable signalPath = [undefined, undefined, undefined, undefined];
 
+    /**
+     * 
+     * @param {number} signalIndex 1，2，3，4
+     * @param {string} path 路径
+     */
+    @action
+    changeSignalPath(signalIndex, path) {
+        this.signalPath[signalIndex - 1] = path;
+    }
 }
 
 export default new Store();

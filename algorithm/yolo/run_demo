@@ -1,0 +1,4 @@
+cd /home/zk/Desktop/zk/detection/keras-yolo3-4_8/run_demo
+python test.py --image
+model path: logs/
+config: yolo.py

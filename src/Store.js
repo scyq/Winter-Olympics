@@ -9,6 +9,9 @@ class Store {
 
     @observable signalPath = [undefined, undefined, undefined, undefined];
     @observable playground = require("./assets/playground.jpg").default;
+    @observable playgroundHeight = 800;
+    @observable reportOpen = false;
+    @observable report = ["准备就绪"];
 
     /**
      * 
@@ -68,6 +71,19 @@ class Store {
         } finally {
 
         }
+    }
+
+    @action
+    triggerReport() {
+        console.log(1)
+        this.reportOpen = !this.reportOpen;
+    }
+
+    @action
+    handleScroll(e) {
+        console.log(e);
+        e.preventDefault();
+        this.playgroundHeight -= e.deltaY;
     }
 }
 

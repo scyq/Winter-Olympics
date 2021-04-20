@@ -14,24 +14,24 @@ class Cameras extends React.Component {
 
                 <div className="one-row">
                     <div className="signal-video">
-                        <div>信号源1</div>
+                        <div className="font">信号源1</div>
                         <Player path={store.signalPath[0]}></Player>
                     </div>
 
                     <div className="signal-video">
-                        <div>信号源2</div>
+                        <div className="font">信号源2</div>
                         <Player path={store.signalPath[1]}></Player>
                     </div>
                 </div>
 
                 <div className="one-row">
                     <div className="signal-video">
-                        <div>信号源3</div>
+                        <div className="font">信号源3</div>
                         <Player path={store.signalPath[2]}></Player>
                     </div>
 
                     <div className="signal-video">
-                        <div>信号源4</div>
+                        <div className="font">信号源4</div>
                         <Player path={store.signalPath[3]}></Player>
                     </div>
                 </div>

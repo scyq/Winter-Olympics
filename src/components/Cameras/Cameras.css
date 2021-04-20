@@ -1,6 +1,7 @@
 .Cameras {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .Cameras .one-row {
@@ -10,8 +11,13 @@
 }
 
 .Cameras .signal-video{
+    font-weight: bold;
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    padding: 10px;
     align-items: flex-start;
+}
+
+.Cameras .signal-video .font{
+    margin-bottom: 5px;
 }

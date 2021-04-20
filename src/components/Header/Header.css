@@ -4,7 +4,7 @@
     justify-content: center;
     font-size: 40px;
     padding: 20px;
-    width: 100%;
+    width: -webkit-fill-available;
     color: white;
     background: rgb(0,150,195);
     box-shadow: 0 5px 10px dimgray;

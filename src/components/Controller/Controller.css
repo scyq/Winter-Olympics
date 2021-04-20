@@ -1,6 +1,7 @@
 .Controller {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     margin-top: 20px;
 }
 
@@ -14,13 +15,21 @@
 }
 
 #loadSignal {
-    background: linear-gradient(to right, #f6d365 0%, #fda085 100%)
+    background: linear-gradient(to right, #f6d365 0%, #fda085 100%); 
+    color: white;
 }
 
 #startBtn {
     background: linear-gradient(-90deg, #29bdd9 0%, #276ace 100%);
+    color: white;
 }
 
 #vrBtn {
-    background: linear-gradient(to right, #ff9569 0%, #e92758 100%)
+    background: linear-gradient(to right, #ff9569 0%, #e92758 100%);
+    color: white;
+}
+
+#dataBtn {
+    background-image: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+    color: white;
 }

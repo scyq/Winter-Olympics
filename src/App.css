@@ -4,7 +4,14 @@
   align-items: center;
 }
 
-.App .row-panel {
+.App .col-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.App .row-panel { 
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -12,10 +19,7 @@
 }
 
 .App .playground {
-  margin: 30px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  margin: 20px  ;
 }
 
 .site-page-header {

@@ -18,11 +18,11 @@ class App extends React.Component {
         <div className="App">
           <Header></Header>
           <div className="row-panel">
-            <Controller></Controller>
-            <Cameras></Cameras>
-          </div>
-          <div className="playground">
-            <img src={store.playground} alt="playground" style={{ width: "80%" }}></img>
+            <img className="playground" src={store.playground} alt="playground" style={{ height: "800px" }}></img>
+            <div className="col-panel">
+              <Controller></Controller>
+              <Cameras></Cameras>
+            </div>
           </div>
         </div>
       </Provider>

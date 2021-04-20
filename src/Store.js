@@ -26,6 +26,12 @@ class Store {
             this.signalPath[i] = require("./assets/example.mp4").default;
     }
 
+    vr() {
+        fetch(host + "/vr")
+            .then(res => res.json())
+            .then(data => console.log(data));
+    }
+
     start() {
         fetch(host + "/start")
             .then(res => res.body)

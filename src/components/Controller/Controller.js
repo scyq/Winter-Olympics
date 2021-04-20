@@ -11,9 +11,10 @@ class Controller extends React.Component {
         const { store } = this.props;
         return (
             <div className="Controller">
-                <Button id="loadSignal" icon={<ApiFilled />} onClick={() => { store.loadSignal() }}>加载信号</Button>
+                <Button id="loadSignal" icon={<ApiFilled />} onClick={() => { store.loadSignal() }}>输入视频</Button>
                 <Button id="startBtn" icon={<PlayCircleFilled />} onClick={() => { store.start() }}>轨迹生成</Button>
-                <Button id="vrBtn" icon={<CodepenOutlined />} >虚拟现实</Button>
+                <Button id="vrBtn" icon={<CodepenOutlined />} onClick={() => { store.vr() }} >虚拟现实</Button>
+                <Button id="dataBtn" icon={<CodepenOutlined />} onClick={() => { store.vr() }} >过程显示</Button>
             </div>
         );
     }

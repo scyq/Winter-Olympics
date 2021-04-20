@@ -6,15 +6,6 @@ import "./Cameras.css";
 @inject("store")
 @observer
 class Cameras extends React.Component {
-
-    /**
-     * @param {ChangeEvent<HTMLInputElement>} e file selection
-     */
-    videoSelection(e, idx, store) {
-        const [file] = e.target.files;
-        store.changeSignalPath(idx, URL.createObjectURL(file));
-    }
-
     render() {
         const { store } = this.props;
 

@@ -20,14 +20,38 @@ class Store {
         this.signalPath[signalIndex - 1] = path;
     }
 
+    @action
+    loadSignal() {
+        for (let i = 0; i < this.signalPath.length; i++)
+            this.signalPath[i] = require("./assets/example.mp4").default;
+    }
+
     start() {
         fetch(host + "/start")
-            .then(res => res.json())
-            .then(data => {
-                if (data) {
-                    this.analysisDone();
-                }
-            });
+            .then(res => res.body)
+            .then(body => {
+                const reader = body.getReader();
+                return new ReadableStream({
+                    start(controller) {
+                        return pump();
+                        function pump() {
+                            return reader.read().then(({ done, value }) => {
+                                if (done) {
+                                    controller.close();
+                                    return;
+                                }
+                                controller.enqueue(value);
+                                return pump();
+                            });
+                        }
+                    }
+                });
+            })
+            .then(stream => new Response(stream))
+            .then(response => response.blob())
+            .then(blob => URL.createObjectURL(blob))
+            .then(url => this.playground = url)
+
     }
 
     @action

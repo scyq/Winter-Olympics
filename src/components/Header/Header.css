@@ -7,4 +7,5 @@
     width: 100%;
     color: white;
     background: rgb(0,150,195);
+    box-shadow: 0 5px 10px dimgray;
 }

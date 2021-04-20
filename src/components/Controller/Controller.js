@@ -11,7 +11,7 @@ class Controller extends React.Component {
         const { store } = this.props;
         return (
             <div className="Controller">
-                <Button id="loadSignal" icon={<ApiFilled />}>加载信号</Button>
+                <Button id="loadSignal" icon={<ApiFilled />} onClick={() => { store.loadSignal() }}>加载信号</Button>
                 <Button id="startBtn" icon={<PlayCircleFilled />} onClick={() => { store.start() }}>轨迹生成</Button>
                 <Button id="vrBtn" icon={<CodepenOutlined />} >虚拟现实</Button>
             </div>

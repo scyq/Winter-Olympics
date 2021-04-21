@@ -1,13 +1,10 @@
 .header {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     font-size: 40px;
     padding: 20px;
     width: -webkit-fill-available;
-}
-
-.header .title {
     background: rgb(0,150,195);
     color: white;
     padding: 30px 120px 30px 120px;

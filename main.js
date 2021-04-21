@@ -7,7 +7,18 @@ let mainWindow;
 function createWindow() {
     //创建浏览器窗口,宽高自定义具体大小你开心就好
     mainWindow = new BrowserWindow({ width: 1920, height: 1080 });
-    mainWindow.loadURL('http://localhost:3000/');
+    mainWindow.maximize();
+
+    // 加载应用----react 打包
+    mainWindow.loadURL(url.format({
+        pathname: path.join(__dirname, './build/index.html'),
+        protocol: 'file:',
+        slashes: true
+    }));
+
+    // 调试用
+    // mainWindow.loadURL('http://localhost:3000/');
+
     mainWindow.on('closed', function () {
         mainWindow = null
     });

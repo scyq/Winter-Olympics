@@ -4,6 +4,7 @@ import Drawer from '@material-ui/core/Drawer';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import "./Process.css";
 
 const drawerWidth = 300;
 
@@ -26,13 +27,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function PermanentDrawer(props) {
     const classes = useStyles();
-    let report = props.report.map(info => {
-        return (
-            <div>
-                <div>{info}...</div>
-            </div>
-        );
-    });
     return (
         <Drawer
             className={classes.drawer}
@@ -49,7 +43,13 @@ export default function PermanentDrawer(props) {
                 </IconButton>
             </div>
             <Divider />
-            {report}
+            <div className="report">
+                {props.report.map(info => {
+                    return (
+                        <div>{info}</div>
+                    );
+                })}
+            </div>
         </Drawer>
     );
 }

@@ -4,7 +4,7 @@ import './Player.css';
 class Player extends React.Component {
     render() {
         return (
-            <video className="Player" src={this.props.path} controls height="300px" autoPlay></video>
+            <video className="Player" src={this.props.path} controls height="300px" width="533px" autoPlay></video>
         );
     }
 }

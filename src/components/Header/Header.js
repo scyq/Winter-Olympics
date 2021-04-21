@@ -7,7 +7,7 @@ class Header extends React.Component {
     render() {
         return (
             <div className="header">
-                <div className="title">冰壶运动虚拟教学辅助训练系统</div>
+                冰壶运动虚拟教学辅助训练系统
             </div>
         );
     }
